@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>To Do List</h1>
+      <h1>To Do List App</h1>
       <!-- sign-up button - from class notes/lecture-->
       <form id="sign-up" class="border">
                <fieldset>
@@ -29,7 +29,7 @@
               <fieldset>
                 <legend> Sign In!</legend>
                 <input type="text" name="credentials[email]" placeholder="Email" />
-                <input type="text" name="credentials[password]" placeholder="Password">
+                <input type="password" name="credentials[password]" placeholder="Password">
                 <input type="submit" value="Sign In!">
               </fieldset>
       </form>
@@ -49,5 +49,23 @@
                 <input type="submit" value="Sign Out!">
               </fieldset>
       </form>
+      <div class="container">
+        <h2 class="text-center">My To-Dos</h2>
+          <div class="row">
+            <form class="col - 8 mx auto">
+            <div class="input-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter To-Do Item"><span><button type="submit" class="btn btn-primary">Submit</button></span>
+            </div>
+            </form>
+          </div>
+          <div class="row">
+            <ul class="col - 8 mx-auto">
+              <li> to do list item <input type="radio" aria-label="Radio button for following text input"></li>
+              <li> to do list item <input type="radio" aria-label="Radio button for following text input"></li>
+              <li> to do list item <input type="radio" aria-label="Radio button for following text input"></li>
+            </ul>
+          </div>
+        </div>
     </body>
 </html>
