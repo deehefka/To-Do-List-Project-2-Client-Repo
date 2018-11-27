@@ -1,1 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
+
+ul {
+  list-style: none;
+  margin-top: 2rem;
+  border-top: 2px solid;
+  display: none;
+}
+
+li {
+  border-bottom: 1px solid;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+input[type=radio] {
+  float: right;
+  height: 30px;
+  width: 30px;
+  border: 2px solid;
+}
+
+h2 {
+  padding-top: 2rem;
+}
