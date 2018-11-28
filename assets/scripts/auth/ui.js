@@ -26,10 +26,13 @@ const signInSuccess = data => {
   $('#sign-up').hide()
   $('#sign-in').hide()
   document.getElementById('change-password').hidden = false
-  document.getElementById('textInput').hidden = false
   document.getElementById('my-to-dos').hidden = false
+  document.getElementById('todo_list-create').hidden = false
+  document.getElementById('todo_list-update').hidden = false
+  document.getElementById('todo_list-show').hidden = false
+  document.getElementById('todo_list-index').hidden = false
+  document.getElementById('todo_list-delete').hidden = false
   document.getElementById('sign-out').hidden = false
-  document.getElementById('submit-button').hidden = false
   $('#message').text('You signed in! Create some To-Dos!')
   $('#message').removeClass()
   $('#message').addClass('success')
@@ -76,20 +79,77 @@ const signOutFailure = data => {
   // console.error('signOutFailure ran. Error is :', error)
 }
 
-// const textInputSuccess = data => {
-//   $('#message').text('You created an item for your to-do list!')
-//   $('#message').removeClass()
-//   $('#message').addClass('success')
-//   $('#textInput').trigger('reset')
-// }
-//
-// const textInputFailure = data => {
-//   $('#message').text('Error on to-do item creation')
-//   $('#message').removeClass()
-//   $('#message').addClass('failure')
-//   // console.error('signUpFailure ran. Error is :', error)
-//   $('#textInput').trigger('reset')
-// }
+const todoListCreateSuccess = data => {
+  // store.schemes = data.schemes
+  $('#message').text('You created an item for your to-do list!')
+  document.getElementById('list').hidden = false
+  document.getElementById('todo-item').hidden = false
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  $('#todo_list-create').trigger('reset')
+}
+
+const todoListCreateFailure = data => {
+  $('#message').text('Error on to-do item creation')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  // console.error('signUpFailure ran. Error is :', error)
+  $('#todo_list-create').trigger('reset')
+}
+
+const todoListShowSuccess = data => {
+  // store.schemes = data.schemes
+  $('#message').text('Here is one of your To-Do list items!')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+}
+
+const todoListShowFailure = data => {
+  $('#message').text('Failure on todo_list show')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+}
+
+const todoListDeleteSuccess = data => {
+  $('#message').text('You deleted a To-Do list item! Great job!')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+}
+
+const todoListDeleteFailure = data => {
+  $('#message').text('Failure on todo_list delete')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+}
+
+const todoListUpdateSuccess = data => {
+  // store.schemes = data.schemes
+  $('#message').text('You updated an item for your to-do list!')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  $('#todo_list-create').trigger('reset')
+}
+
+const todoListUpdateFailure = data => {
+  $('#message').text('Error on to-do item update')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  // console.error('signUpFailure ran. Error is :', error)
+  $('#todo_list-create').trigger('reset')
+}
+
+const todoListIndexSuccess = data => {
+  // store.schemes = data.schemes
+  $('#message').text('Here are all your To-Do list items!')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+}
+
+const todoListIndexFailure = data => {
+  $('#message').text('Failure on todo_list index')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+}
 
 module.exports = {
   signUpSuccess,
@@ -99,7 +159,15 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
-  // textInputSuccess,
-  // textInputFailure
+  signOutFailure,
+  todoListCreateSuccess,
+  todoListCreateFailure,
+  todoListShowSuccess,
+  todoListShowFailure,
+  todoListDeleteSuccess,
+  todoListDeleteFailure,
+  todoListUpdateSuccess,
+  todoListUpdateFailure,
+  todoListIndexSuccess,
+  todoListIndexFailure
 }
