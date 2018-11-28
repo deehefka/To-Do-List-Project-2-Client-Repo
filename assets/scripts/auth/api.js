@@ -44,9 +44,18 @@ const signOut = () => {
   })
 }
 
+// const textInput = data => {
+//   return $.ajax({
+//     url: config.apiUrl + '/todo_lists',
+//     method: 'POST',
+//     data
+//   })
+// }
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut
+  // textInput
 }

@@ -1,5 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background-image: url('http://www.gradeateaching.com/wp-content/uploads/2017/08/post-it-1975179_1920.png');
+  background-position: auto;
+  background-size: cover;
+}
+
 ul {
   list-style: none;
   margin-top: 2rem;
@@ -22,4 +28,28 @@ input[type=radio] {
 
 h2 {
   padding-top: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+#sign-up {
+  text-align: center;
+}
+
+#sign-in {
+  text-align: center;
+}
+
+#change-password {
+  text-align: center;
+}
+
+#sign-out {
+  text-align: center;
+}
+
+#message {
+  text-align: center;
 }

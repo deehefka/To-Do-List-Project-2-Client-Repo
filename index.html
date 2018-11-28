@@ -13,6 +13,7 @@
     </head>
     <body>
       <h1>To Do List App</h1>
+      <div id="message"></div>
       <!-- sign-up button - from class notes/lecture-->
       <form id="sign-up" class="border">
                <fieldset>
@@ -50,12 +51,13 @@
               </fieldset>
       </form>
       <div class="container">
-        <h2 class="text-center">My To-Dos</h2>
+        <h2 id="my-to-dos" class="text-center" hidden>My To-Dos</h2>
           <div class="row">
             <form class="col - 8 mx auto">
             <div class="input-group">
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter To-Do Item"><span><button type="submit" class="btn btn-primary">Submit</button></span>
+              <input type="text" class="form-control" id="textInput"
+                placeholder="Enter To-Do Item" hidden>
+                <span><button id="submit-button" type="submit" class="btn btn-primary" hidden>Submit</button></span>
             </div>
             </form>
           </div>
