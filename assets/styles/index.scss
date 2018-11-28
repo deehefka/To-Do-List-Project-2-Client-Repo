@@ -10,7 +10,6 @@ ul {
   list-style: none;
   margin-top: 2rem;
   border-top: 2px solid;
-  display: none;
 }
 
 li {
@@ -52,4 +51,29 @@ h1 {
 
 #message {
   text-align: center;
+}
+
+#todo_list-create {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+#todo_list-update {
+  text-align: left;
+  padding-top: 2rem;
+}
+
+#todo_list-show {
+  text-align: left;
+  padding-top: 2rem;
+}
+
+#todo_list-index {
+  text-align: left;
+  padding-top: 6rem;
+}
+
+#todo_list-delete {
+  text-align: left;
+  padding-top: 2rem;
 }

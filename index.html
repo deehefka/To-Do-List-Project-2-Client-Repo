@@ -52,22 +52,47 @@
       </form>
       <div class="container">
         <h2 id="my-to-dos" class="text-center" hidden>My To-Dos</h2>
+          <form id="todo_list-create" class="col-8 mx-auto" hidden>
+            <fieldset>
+              <input type="text" name="todo_list[title]" placeholder="What do you need to do?" class="col - 8 mx-auto" id="title">
+              <input type="text" name="todo_list[description]" placeholder="Give me details..."class="col - 8 mx-auto" id="description">
+              <input type="submit" class="btn btn-primary" value="Create a To-Do">
+            </fieldset>
+          </form>
+
+          <form id="todo_list-index" hidden>
+            <fieldset>
+                <input type="submit" class="btn btn-primary" value="Show all To-Dos">
+            </fieldset>
+          </form>
+
+          <form id="todo_list-show" hidden>
+            <fieldset>
+              <input type="text" name="todo_list[id]" placeholder="ToDo List ID" id="show-todo_list[id]">
+              <input type="submit" class="btn btn-primary" value="Show one To-Do Item">
+            </fieldset>
+          </form>
+
+          <form id="todo_list-update" hidden>
+            <fieldset>
+              <input type="text" name="todo_list[title]" placeholder="Change the Name of your To-Do" class="col - 8" id="title">
+              <input type="text" name="todo_list[description]" placeholder="Change the details..." class="col - 8" id="description">
+              <input type="submit" class="btn btn-primary" value="Update one To-Do Item">
+            </fieldset>
+          </form>
+
+          <form id="todo_list-delete" hidden>
+            <fieldset>
+              <input type="text" name="todo_list[id]" placeholder="ToDo List ID" id="delete-todo_list[id]">
+              <input type="submit" class="btn btn-primary" value="Delete To-Do List">
+            </fieldset>
+          </form>
+
+        </div>
           <div class="row">
-            <form class="col - 8 mx auto">
-            <div class="input-group">
-              <input type="text" class="form-control" id="textInput"
-                placeholder="Enter To-Do Item" hidden>
-                <span><button id="submit-button" type="submit" class="btn btn-primary" hidden>Submit</button></span>
-            </div>
-            </form>
-          </div>
-          <div class="row">
-            <ul class="col - 8 mx-auto">
-              <li> to do list item <input type="radio" aria-label="Radio button for following text input"></li>
-              <li> to do list item <input type="radio" aria-label="Radio button for following text input"></li>
-              <li> to do list item <input type="radio" aria-label="Radio button for following text input"></li>
+            <ul id="list" class="col - 8 mx-auto" hidden>
+              <li id="todo-item" hidden><input type="radio" aria-label="Radio button for following text input"></li>
             </ul>
           </div>
-        </div>
     </body>
 </html>

@@ -44,18 +44,86 @@ const signOut = () => {
   })
 }
 
-// const textInput = data => {
+// const todoListCreate = data => {
 //   return $.ajax({
 //     url: config.apiUrl + '/todo_lists',
 //     method: 'POST',
-//     data
+//     headers: {
+//       contentType: 'application/json',
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data: {
+//       todo_list: {
+//         title: data.title,
+//         description: data.description
+//       }
+//     }
 //   })
 // }
+
+const todoListCreate = data => {
+  return $.ajax({
+    url: config.apiUrl + '/todo_lists',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
+const todoListUpdate = data => {
+  return $.ajax({
+    url: config.apiUrl + '/todo_lists/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const todoListDelete = id => {
+  return $.ajax({
+    url: config.apiUrl + '/todo_lists/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {}
+  })
+}
+
+const todoListIndex = data => {
+  return $.ajax({
+    url: config.apiUrl + '/todo_lists',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
+const todoListShow = data => {
+  return $.ajax({
+    url: config.apiUrl + '/todo_lists/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {}
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
-  // textInput
+  signOut,
+  todoListCreate,
+  todoListUpdate,
+  todoListDelete,
+  todoListIndex,
+  todoListShow
 }
