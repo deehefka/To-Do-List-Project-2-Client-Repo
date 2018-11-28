@@ -26,7 +26,10 @@ const signInSuccess = data => {
   $('#sign-up').hide()
   $('#sign-in').hide()
   document.getElementById('change-password').hidden = false
+  document.getElementById('textInput').hidden = false
+  document.getElementById('my-to-dos').hidden = false
   document.getElementById('sign-out').hidden = false
+  document.getElementById('submit-button').hidden = false
   $('#message').text('You signed in! Create some To-Dos!')
   $('#message').removeClass()
   $('#message').addClass('success')
@@ -73,6 +76,21 @@ const signOutFailure = data => {
   // console.error('signOutFailure ran. Error is :', error)
 }
 
+// const textInputSuccess = data => {
+//   $('#message').text('You created an item for your to-do list!')
+//   $('#message').removeClass()
+//   $('#message').addClass('success')
+//   $('#textInput').trigger('reset')
+// }
+//
+// const textInputFailure = data => {
+//   $('#message').text('Error on to-do item creation')
+//   $('#message').removeClass()
+//   $('#message').addClass('failure')
+//   // console.error('signUpFailure ran. Error is :', error)
+//   $('#textInput').trigger('reset')
+// }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -82,4 +100,6 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
+  // textInputSuccess,
+  // textInputFailure
 }

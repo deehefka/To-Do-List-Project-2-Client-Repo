@@ -39,14 +39,25 @@ const onSignOut = event => {
   console.log()
   document.getElementById('sign-up').hidden = false
   document.getElementById('sign-in').hidden = false
+  document.getElementById('textInput').hidden = true
+  document.getElementById('submit-button').hidden = true
+  document.getElementById('my-to-dos').hidden = true
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
+
+// const onTextInput = event => {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   api.textInput(data)
+//     .then(ui.textInputSuccess)
+//     .catch(ui.textInputFailure)
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut
+  // onTextInput
 }
