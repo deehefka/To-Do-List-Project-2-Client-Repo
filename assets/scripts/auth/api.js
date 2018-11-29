@@ -90,7 +90,6 @@ const todoListDelete = id => {
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
-    // data: {}
   })
 }
 
