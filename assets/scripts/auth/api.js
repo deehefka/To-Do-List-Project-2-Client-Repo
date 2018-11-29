@@ -83,9 +83,9 @@ const todoListUpdate = (data, id) => {
   })
 }
 
-const todoListDelete = (id) => {
+const todoListDelete = id => {
   return $.ajax({
-    url: config.apiUrl + `/todo_lists/$(id)`,
+    url: config.apiUrl + '/todo_lists/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token

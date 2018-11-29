@@ -1,14 +1,19 @@
 To-Do List - Full Stack Project #2
 
-https://to-do-project-2.herokuapp.com/ https://git.heroku.com/to-do-project-2.git
+https://to-do-project-2.herokuapp.com/
+https://deehefka.github.io/To-Do-List-Project-2-Client-Repo/
 
 This project will be an attempt to create a front end that creates to-do lists for the user. This would be a valuable application for anyone needing to keep track of their life.
 
 Unsolved problems:
 
+Styling - this site needs it badly
+To-Do List items to pop up
+Update and Delete and Show 1 Buttons
+
 Technologies used:
 
-HTML, CSS, Javascript
+HTML, CSS, Javascript, jQuery
 
 User Stories:
 
@@ -30,19 +35,15 @@ https://imgur.com/YoT3AKy
 Planning:
 
 1) Wireframe/plan
-2) Scaffold
-3) Curls Scripts
-4) Add lists to user
-5) model
-6) serializer
-7) api sign up
-8) api sign in
-9) api change pw
-10) api sign out
-11) create
-12) get (index and show)
-13) delete
-14) update
-15) Readme
-16) troubleshoot
-17) style
+2) api sign up
+3) api sign in
+4) api change pw
+5) api sign out
+6) create
+7) get (index and show)
+8) delete
+9) update
+10) Javascript??
+11) Readme
+12) troubleshoot
+13) style
