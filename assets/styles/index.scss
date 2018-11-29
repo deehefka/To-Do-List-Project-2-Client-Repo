@@ -1,29 +1,39 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-image: url('http://www.gradeateaching.com/wp-content/uploads/2017/08/post-it-1975179_1920.png');
-  background-position: auto;
+  background: url('../../correct_postit.png') no-repeat 25% 25% fixed;
+  background-color: #ccc;
+  // background-repeat: no-repeat;
+  // background-position: fixed;
   background-size: cover;
 }
 
-ul {
-  list-style: none;
-  margin-top: 2rem;
-  border-top: 2px solid;
+#output {
+  text-align: center;
+  background-color: rgba(189, 233, 249, 0.7);
+  border-style: solid;
+  padding-bottom: 1px;
+  margin: 30px;
 }
 
-li {
-  border-bottom: 1px solid;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+// ul {
+//   list-style: none;
+//   margin-top: 2rem;
+//   border-top: 2px solid;
+// }
+//
+// li {
+//   border-bottom: 1px solid;
+//   padding-top: 1rem;
+//   padding-bottom: 1rem;
+// }
 
-input[type=radio] {
-  float: right;
-  height: 30px;
-  width: 30px;
-  border: 2px solid;
-}
+// input[type=radio] {
+//   float: right;
+//   height: 30px;
+//   width: 30px;
+//   border: 2px solid;
+// }
 
 h2 {
   padding-top: 2rem;
@@ -50,30 +60,63 @@ h1 {
 }
 
 #message {
+  padding-top: 1rem;
   text-align: center;
 }
 
 #todo_list-create {
-  text-align: center;
-  padding-top: 2rem;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  // padding-top: 2px;
+}
+
+#addTaskButton {
+  // text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 #todo_list-update {
-  text-align: left;
-  padding-top: 2rem;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 1rem;
+}
+
+#updateTaskButton {
+  display: block;
+  margin: 0 auto;
 }
 
 #todo_list-show {
-  text-align: left;
-  padding-top: 2rem;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  // padding-top: 1rem;
 }
 
-#todo_list-index {
-  text-align: left;
-  padding-top: 6rem;
+#showButton {
+  display: block;
+  margin: 0 auto;
 }
 
+//
+// #todo_list-index {
+//   text-align: center;
+//   margin-left: 20%;
+//   margin-right: 20%;
+//   // padding-top: 6rem;
+// }
+//
 #todo_list-delete {
-  text-align: left;
-  padding-top: 2rem;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 1rem;
+}
+
+#deleteButton {
+  display: block;
+  margin: 0 auto;
 }

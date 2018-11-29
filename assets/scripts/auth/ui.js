@@ -29,7 +29,6 @@ const signInSuccess = data => {
   document.getElementById('my-to-dos').hidden = false
   document.getElementById('todo_list-create').hidden = false
   document.getElementById('todo_list-update').hidden = false
-  document.getElementById('todo_list-show').hidden = false
   document.getElementById('todo_list-index').hidden = false
   document.getElementById('todo_list-delete').hidden = false
   document.getElementById('sign-out').hidden = false
@@ -82,7 +81,6 @@ const signOutFailure = data => {
 const todoListCreateSuccess = data => {
   store.todo_lists = data.todo_lists
   $('#message').text('You created an item for your to-do list!')
-  // document.getElementById('list-container').hidden = false
   // document.getElementById('todo-item').hidden = false
   $('#message').removeClass()
   $('#message').addClass('success')
@@ -97,18 +95,18 @@ const todoListCreateFailure = data => {
   $('#todo_list-create').trigger('reset')
 }
 
-const todoListShowSuccess = data => {
-  // store.schemes = data.schemes
-  $('#message').text('Here is one of your To-Do list items!')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-}
-
-const todoListShowFailure = data => {
-  $('#message').text('Failure on todo_list show')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-}
+// const todoListShowSuccess = data => {
+//   // store.schemes = data.schemes
+//   $('#message').text('Here is one of your To-Do list items!')
+//   $('#message').removeClass()
+//   $('#message').addClass('success')
+// }
+//
+// const todoListShowFailure = data => {
+//   $('#message').text('Failure on todo_list show')
+//   $('#message').removeClass()
+//   $('#message').addClass('failure')
+// }
 
 const todoListDeleteSuccess = data => {
   $('#message').text('You deleted a To-Do list item!')
@@ -140,7 +138,18 @@ const todoListUpdateFailure = data => {
 
 const todoListIndexSuccess = data => {
   store.todo_lists = data.todo_lists
+  document.getElementById('output').hidden = false
   $('#message').text('Here are all your To-Do list items!')
+  $('#output').empty()
+  data.todo_lists.forEach(todo_list => {
+    $('#output').append(
+      `<div id=${todo_list.id}> <p> ${todo_list.id} </p> </div>`)
+    for (const key in todo_list) {
+      if (key !== 'id') {
+        $(`#${todo_list.id}`).append(`<p>${key}: ${todo_list[key]}</p>`)
+      }
+    }
+  })
   $('#message').removeClass()
   $('#message').addClass('success')
 }
@@ -162,8 +171,8 @@ module.exports = {
   signOutFailure,
   todoListCreateSuccess,
   todoListCreateFailure,
-  todoListShowSuccess,
-  todoListShowFailure,
+  // todoListShowSuccess,
+  // todoListShowFailure,
   todoListDeleteSuccess,
   todoListDeleteFailure,
   todoListUpdateSuccess,

@@ -14,7 +14,7 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#todo_list-create').on('submit', authEvents.onTodoListCreate)
   $('#todo_list-index').on('submit', authEvents.onTodoListIndex)
-  $('#todo_list-show').on('submit', authEvents.onTodoListShow)
+  // $('#todo_list-show').on('submit', authEvents.onTodoListShow)
   $('#todo_list-delete').on('submit', authEvents.onTodoListDelete)
   $('#todo_list-update').on('submit', authEvents.onTodoListUpdate)
 })

@@ -74,12 +74,12 @@ const todoListCreate = data => {
 
 const todoListUpdate = (data, id) => {
   return $.ajax({
-    url: config.apiUrl + `/todo_lists/${id}`,
+    url: config.apiUrl + '/todo_lists/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data
   })
 }
 
@@ -104,16 +104,16 @@ const todoListIndex = () => {
   })
 }
 
-const todoListShow = (id) => {
-  return $.ajax({
-    url: config.apiUrl + `/todo_lists/${id}`,
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-    // data: {}
-  })
-}
+// const todoListShow = id => {
+//   return $.ajax({
+//     url: config.apiUrl + '/todo_lists/' + id,
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//     // data: {}
+//   })
+// }
 
 module.exports = {
   signUp,
@@ -123,6 +123,6 @@ module.exports = {
   todoListCreate,
   todoListUpdate,
   todoListDelete,
-  todoListIndex,
-  todoListShow
+  todoListIndex
+  // todoListShow
 }

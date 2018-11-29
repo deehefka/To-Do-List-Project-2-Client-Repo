@@ -42,8 +42,10 @@ const onSignOut = event => {
   document.getElementById('my-to-dos').hidden = true
   document.getElementById('todo_list-create').hidden = true
   document.getElementById('todo_list-update').hidden = true
-  document.getElementById('todo_list-show').hidden = true
-  document.getElementById('todo_list-index').hidden = true
+  document.getElementById('showButton').hidden = true
+  document.getElementById('deleteButton').hidden = true
+  // document.getElementById('todo_list-show').hidden = true
+  // document.getElementById('todo_list-index').hidden = true
   document.getElementById('todo_list-delete').hidden = true
   api.signOut()
     .then(ui.signOutSuccess)
@@ -64,19 +66,20 @@ const onTodoListCreate = event => {
 
 const onTodoListUpdate = event => {
   event.preventDefault()
+  // const id = $('#taskId').val()
   const data = getFormFields(event.target)
-  api.todoListUpdate(data)
+  api.todoListUpdate(data, data.todo_list.id)
     .then(ui.todoListUpdateSuccess) // if your request was succesful
     .catch(ui.todoListUpdateFailure) // if your request failed
 }
 
-const onTodoListShow = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  api.todoListShow(data)
-    .then(ui.todoListShowSuccess) // if your request was succesful
-    .catch(ui.todoListShowFailure) // if your request failed
-}
+// const onTodoListShow = event => {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   api.todoListShow(data)
+//     .then(ui.todoListShowSuccess) // if your request was succesful
+//     .catch(ui.todoListShowFailure) // if your request failed
+// }
 
 const onTodoListIndex = event => {
   event.preventDefault()
@@ -88,9 +91,9 @@ const onTodoListIndex = event => {
 
 const onTodoListDelete = event => {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  const data = $('#delete-task').val()
   // const data = $('#delete-todo_list[id]').val()
-  api.todoListDelete(data.todo_list.id)
+  api.todoListDelete(data)
     .then(ui.todoListDeleteSuccess) // if your request was succesful
     .catch(ui.todoListDeleteFailure) // if your request failed
 }
@@ -103,6 +106,6 @@ module.exports = {
   onTodoListCreate,
   onTodoListUpdate,
   onTodoListIndex,
-  onTodoListShow,
+  // onTodoListShow,
   onTodoListDelete
 }
