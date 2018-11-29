@@ -72,32 +72,10 @@ const todoListCreate = data => {
   })
 }
 
-const todoListUpdate = data => {
+const todoListUpdate = (data, id) => {
   return $.ajax({
-    url: config.apiUrl + '/todo_lists/' + id,
+    url: config.apiUrl + `/todo_lists/${id}`,
     method: 'PATCH',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data
-  })
-}
-
-const todoListDelete = id => {
-  return $.ajax({
-    url: config.apiUrl + '/todo_lists/' + id,
-    method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: {}
-  })
-}
-
-const todoListIndex = data => {
-  return $.ajax({
-    url: config.apiUrl + '/todo_lists',
-    method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -105,14 +83,36 @@ const todoListIndex = data => {
   })
 }
 
-const todoListShow = data => {
+const todoListDelete = (id) => {
   return $.ajax({
-    url: config.apiUrl + '/todo_lists/' + id,
+    url: config.apiUrl + `/todo_lists/$(id)`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+    // data: {}
+  })
+}
+
+const todoListIndex = () => {
+  return $.ajax({
+    url: config.apiUrl + '/todo_lists',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: {}
+    }
+    // data: data
+  })
+}
+
+const todoListShow = (id) => {
+  return $.ajax({
+    url: config.apiUrl + `/todo_lists/${id}`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+    // data: {}
   })
 }
 

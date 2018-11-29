@@ -82,8 +82,8 @@ const signOutFailure = data => {
 const todoListCreateSuccess = data => {
   // store.schemes = data.schemes
   $('#message').text('You created an item for your to-do list!')
-  document.getElementById('list').hidden = false
-  document.getElementById('todo-item').hidden = false
+  // document.getElementById('list-container').hidden = false
+  // document.getElementById('todo-item').hidden = false
   $('#message').removeClass()
   $('#message').addClass('success')
   $('#todo_list-create').trigger('reset')
@@ -123,7 +123,7 @@ const todoListDeleteFailure = data => {
 }
 
 const todoListUpdateSuccess = data => {
-  // store.schemes = data.schemes
+  // store.todo_lists = data.todo_lists
   $('#message').text('You updated an item for your to-do list!')
   $('#message').removeClass()
   $('#message').addClass('success')

@@ -88,7 +88,7 @@ const onTodoListIndex = event => {
 
 const onTodoListDelete = event => {
   event.preventDefault()
-  api.todoListDelete(data)
+  api.todoListDelete()
     .then(ui.todoListDeleteSuccess) // if your request was succesful
     .catch(ui.todoListDeleteFailure) // if your request failed
 }

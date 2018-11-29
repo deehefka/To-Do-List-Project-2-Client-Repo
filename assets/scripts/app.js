@@ -18,3 +18,22 @@ $(() => {
   $('#todo_list-delete').on('submit', authEvents.onTodoListDelete)
   $('#todo_list-update').on('submit', authEvents.onTodoListUpdate)
 })
+
+// const createButton = document.getElementById('#addTaskButton')
+// const newTitle = document.getElementById('#title')
+// const newDescription = document.getElementById('#description')
+// const listContainer = document.getElementById('#list-container')
+// const templateElement = document.getElementById('#listItemTemplate')
+// const template = templateElement.innerHTML
+//
+// createButton.addEventListener('click', function (event) {
+//   const titleName = newTitle.value
+//   const descriptionName = newDescription.value
+//   listContainer.insertAdjacentHTML('afterbegin', titleName, descriptionName)
+//
+//   const taskHTML = template.replace('<!-- TASK_NAME -->', titleName)
+//   listContainer.insertAdjacentHTML('afterbegin', taskHTML)
+//
+//   const descriptionHTML = template.replace('<!-- DESCRIPTION_NAME -->', descriptionName)
+//   listContainer.insertAdjacentHTML('afterbegin', descriptionHTML)
+// })
