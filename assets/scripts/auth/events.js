@@ -37,6 +37,7 @@ const onSignOut = event => {
   $('#change-password').hide()
   $('#sign-out').hide()
   console.log()
+  // hiding or showing elements after button click
   document.getElementById('sign-up').hidden = false
   document.getElementById('sign-in').hidden = false
   document.getElementById('my-to-dos').hidden = true
@@ -66,8 +67,8 @@ const onTodoListCreate = event => {
 
 const onTodoListUpdate = event => {
   event.preventDefault()
-  // const id = $('#taskId').val()
   const data = getFormFields(event.target)
+  // pulling specific data from id of to-do item
   api.todoListUpdate(data, data.todo_list.id)
     .then(ui.todoListUpdateSuccess) // if your request was succesful
     .catch(ui.todoListUpdateFailure) // if your request failed
@@ -91,6 +92,7 @@ const onTodoListIndex = event => {
 
 const onTodoListDelete = event => {
   event.preventDefault()
+  // deleting data input on click
   const data = $('#delete-task').val()
   // const data = $('#delete-todo_list[id]').val()
   api.todoListDelete(data)

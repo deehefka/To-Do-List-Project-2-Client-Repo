@@ -61,6 +61,7 @@ const signOut = () => {
 //   })
 // }
 
+// pulled from class lectures
 const todoListCreate = data => {
   return $.ajax({
     url: config.apiUrl + '/todo_lists',
@@ -71,7 +72,7 @@ const todoListCreate = data => {
     data: data
   })
 }
-
+// pulled from class lectures
 const todoListUpdate = (data, id) => {
   return $.ajax({
     url: config.apiUrl + '/todo_lists/' + id,
@@ -82,7 +83,7 @@ const todoListUpdate = (data, id) => {
     data
   })
 }
-
+// pulled from class lectures
 const todoListDelete = id => {
   return $.ajax({
     url: config.apiUrl + '/todo_lists/' + id,
@@ -92,7 +93,7 @@ const todoListDelete = id => {
     }
   })
 }
-
+// pulled from class lectures
 const todoListIndex = () => {
   return $.ajax({
     url: config.apiUrl + '/todo_lists',

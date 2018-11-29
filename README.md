@@ -8,8 +8,7 @@ This project will be an attempt to create a front end that creates to-do lists f
 Unsolved problems:
 
 Styling - this site needs it badly
-To-Do List items to pop up
-Update and Delete and Show 1 Buttons
+To-Do List items to pop up on click, not after show all button is clicked
 
 Technologies used:
 
@@ -43,7 +42,7 @@ Planning:
 7) get (index and show)
 8) delete
 9) update
-10) Javascript??
+10) Javascript
 11) Readme
 12) troubleshoot
 13) style

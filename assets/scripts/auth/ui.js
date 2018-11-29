@@ -25,6 +25,7 @@ const signInSuccess = data => {
   store.user = data.user
   $('#sign-up').hide()
   $('#sign-in').hide()
+  // hiding or showing elements after click
   document.getElementById('change-password').hidden = false
   document.getElementById('my-to-dos').hidden = false
   document.getElementById('todo_list-create').hidden = false
@@ -138,12 +139,18 @@ const todoListUpdateFailure = data => {
 
 const todoListIndexSuccess = data => {
   store.todo_lists = data.todo_lists
+  // display tasks on show all click
   document.getElementById('output').hidden = false
   $('#message').text('Here are all your To-Do list items!')
+  // empties output
   $('#output').empty()
+  // function - for each todo list item
   data.todo_lists.forEach(todo_list => {
+    // add to output
     $('#output').append(
+      // formatting how the tasks show to the user
       `<div id=${todo_list.id}> <p> ${todo_list.id} </p> </div>`)
+      // calling the keys and their values and printing them out (user input)
     for (const key in todo_list) {
       if (key !== 'id') {
         $(`#${todo_list.id}`).append(`<p>${key}: ${todo_list[key]}</p>`)
