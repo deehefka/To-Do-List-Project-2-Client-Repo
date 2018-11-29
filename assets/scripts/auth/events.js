@@ -88,8 +88,9 @@ const onTodoListIndex = event => {
 
 const onTodoListDelete = event => {
   event.preventDefault()
-  const data = $('#delete-todo_list[id]').val()
-  api.todoListDelete(data)
+  const data = getFormFields(event.target)
+  // const data = $('#delete-todo_list[id]').val()
+  api.todoListDelete(data.todo_list.id)
     .then(ui.todoListDeleteSuccess) // if your request was succesful
     .catch(ui.todoListDeleteFailure) // if your request failed
 }
