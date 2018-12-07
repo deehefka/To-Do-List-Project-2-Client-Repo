@@ -70,6 +70,7 @@ const signOutSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   // console.log('signOutSuccess ran. Data is :', data)
+  $('#sign-out').trigger('reset')
 }
 
 const signOutFailure = data => {
@@ -77,6 +78,7 @@ const signOutFailure = data => {
   $('#message').removeClass()
   $('#message').addClass('failure')
   // console.error('signOutFailure ran. Error is :', error)
+  $('#sign-out').trigger('reset')
 }
 
 const todoListCreateSuccess = data => {
@@ -113,12 +115,14 @@ const todoListDeleteSuccess = data => {
   $('#message').text('You deleted a To-Do list item!')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#todo_list-delete').trigger('reset')
 }
 
 const todoListDeleteFailure = data => {
   $('#message').text('Failure on todo_list delete')
   $('#message').removeClass()
   $('#message').addClass('failure')
+  $('#todo_list-delete').trigger('reset')
 }
 
 const todoListUpdateSuccess = data => {
@@ -126,7 +130,7 @@ const todoListUpdateSuccess = data => {
   $('#message').text('You updated an item for your to-do list!')
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('#todo_list-create').trigger('reset')
+  $('#todo_list-update').trigger('reset')
 }
 
 const todoListUpdateFailure = data => {
@@ -134,7 +138,7 @@ const todoListUpdateFailure = data => {
   $('#message').removeClass()
   $('#message').addClass('failure')
   // console.error('signUpFailure ran. Error is :', error)
-  $('#todo_list-create').trigger('reset')
+  $('#todo_list-update').trigger('reset')
 }
 
 const todoListIndexSuccess = data => {
