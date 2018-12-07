@@ -25,16 +25,21 @@ const signInSuccess = data => {
   store.user = data.user
   $('#sign-up').hide()
   $('#sign-in').hide()
-  $('#change-password').show()
+  // $('#showButton').show()
   $('#sign-out').show()
+  $('#change-password').show()
   // hiding or showing elements after click
-  // document.getElementById('change-password').hidden = false
+  document.getElementById('change-password').hidden = false
   document.getElementById('my-to-dos').hidden = false
   document.getElementById('todo_list-create').hidden = false
   document.getElementById('todo_list-update').hidden = false
   document.getElementById('todo_list-index').hidden = false
   document.getElementById('todo_list-delete').hidden = false
-  // document.getElementById('sign-out').hidden = false
+  document.getElementById('sign-out').hidden = false
+  document.getElementById('showButton').hidden = false
+  document.getElementById('deleteButton').hidden = false
+  // document.getElementById('passButton').hidden = false
+  // document.getElementById('outButton').hidden = false
   $('#message').text('You signed in! Create some To-Dos!')
   $('#message').removeClass()
   $('#message').addClass('success')
