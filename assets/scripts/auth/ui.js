@@ -150,7 +150,7 @@ const todoListIndexSuccess = data => {
     $('#output').append(
       // formatting how the tasks show to the user
       `<div id=${todo_list.id}> <p> ${todo_list.id} </p> </div>`)
-      // calling the keys and their values and printing them out (user input)
+    // calling the keys and their values and printing them out (user input)
     for (const key in todo_list) {
       if (key !== 'id') {
         $(`#${todo_list.id}`).append(`<p>${key}: ${todo_list[key]}</p>`)

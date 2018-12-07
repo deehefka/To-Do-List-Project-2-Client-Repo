@@ -7,8 +7,10 @@ This project will be an attempt to create a front end that creates to-do lists f
 
 Unsolved problems:
 
-Styling - this site needs it badly
-To-Do List items to pop up on click, not after show all button is clicked
+** To-Do List items to pop up on click, not after show all button is clicked
+** Styling - this site needs it badly
+** I'd like to incorp modals to make the buttons more user friendly/prettier
+** I'd like the individual to-dos to pop up on what look like individual sticky-notes
 
 Technologies used:
 
