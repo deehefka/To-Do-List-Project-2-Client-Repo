@@ -38,8 +38,6 @@ const signInSuccess = data => {
   document.getElementById('sign-out').hidden = false
   document.getElementById('showButton').hidden = false
   document.getElementById('deleteButton').hidden = false
-  // document.getElementById('passButton').hidden = false
-  // document.getElementById('outButton').hidden = false
   $('#message').text('You signed in! Create some To-Dos!')
   $('#message').removeClass()
   $('#message').addClass('success')
