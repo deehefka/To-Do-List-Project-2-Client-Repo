@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>To Do List App</h1>
+      <!-- sign-up button - from class notes/lecture-->
+      <form id="sign-up" class="border">
+               <fieldset>
+                 <legend>Sign up!</legend>
+                 <input type="text" name="credentials[email]" placeholder="Email">
+                 <input type="password" name="credentials[password]" placeholder="Password" >
+                 <input type="password" name="credentials[password_confirmation]"
+                        placeholder="Confirm Password">
+                 <input type="submit" value="Sign up!"/>
+               </fieldset>
+      </form>
+      <!-- sign-in button - from class notes/lecture-->
+      <form id="sign-in" class="border">
+              <fieldset>
+                <legend> Sign In!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email" />
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <input type="submit" value="Sign In!">
+              </fieldset>
+      </form>
+      <!-- change pass button - from class notes/lecture-->
+      <form id="change-password" class="border" hidden>
+         <fieldset>
+           <legend>Change password!</legend>
+           <input type="password" name="passwords[old]" placeholder="Old password">
+           <input type="password" name="passwords[new]" placeholder="New password">
+           <input type="submit" value="Change password!">
+         </fieldset>
+      </form>
+      <!-- sign-out button - from class notes/lecture-->
+      <form id="sign-out" class="border" hidden>
+              <fieldset>
+                <legend> Sign Out!</legend>
+                <input type="submit" value="Sign Out!">
+              </fieldset>
+      </form>
+
+      <h3 id="message"></h3>
+
+      <div class="container">
+        <form id="todo_list-index" hidden>
+          <fieldset>
+              <input type="submit" class="btn btn-primary" value="Show all To-Dos" id="showButton">
+          </fieldset>
+        </form>
+
+        <h2 id="my-to-dos" class="text-center" hidden>My To-Dos</h2>
+            <form id="todo_list-create" class="col-8 mx-auto" hidden>
+            <div id="output" hidden></div>
+            <fieldset>
+              <input type="text" name="todo_list[title]" placeholder="What do you need to do?" class="col - 8 mx-auto" id="title">
+              <input type="text" name="todo_list[description]" placeholder="Give me details..."class="col - 8 mx-auto" id="description">
+              <input type="submit" class="btn btn-primary" value="Create a To-Do" id="addTaskButton">
+            </fieldset>
+          </form>
+
+          <!-- <form id="todo_list-show" hidden>
+            <fieldset>
+              <input type="text" name="todo_list[id]" placeholder="ToDo List ID" id="show-todo_list[id]">
+              <input type="submit" class="btn btn-primary" value="Show one To-Do Item">
+            </fieldset>
+          </form> -->
+
+          <form id="todo_list-update" hidden>
+            <fieldset>
+              <input type="text" name="todo_list[title]" placeholder="Change the Name of your To-Do" class="col - 8 mx-auto" id="titleUpdate">
+              <input type="text" name="todo_list[description]" placeholder="Change the details..." class="col - 8 mx-auto" id="descriptionUpdate">
+              <input type="text" name="todo_list[id]" placeholder="ID number" class="mx-auto" id="taskId">
+              <input type="submit" class="btn btn-primary" value="Update one To-Do Item" id="updateTaskButton">
+            </fieldset>
+          </form>
+
+          <form id="todo_list-delete" hidden>
+            <fieldset>
+              <input type="text" name="todo_list[id]" placeholder="ToDo List ID" id="delete-task">
+              <input type="submit" class="btn btn-primary" value="Delete To-Do List" id="deleteButton">
+            </fieldset>
+          </form>
+        </div>
+    </body>
+</html>
